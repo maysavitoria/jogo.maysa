@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Plataforma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Tela de início -->
+  <div id="startScreen" class="centered">
+    <h1>Jogo de Plataforma</h1>
+    <p>Escolha o modo de jogo:</p>
+    <button onclick="selectMode('single')">1 Jogador</button>
+    <button onclick="selectMode('multi')">2 Jogadores</button>
+  </div>
+
+  <!-- Canvas do jogo -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Tela de vitória -->
+  <div id="winner" class="centered hidden">
+    <h1 id="winnerText"></h1>
+    <button onclick="restartGame()">Reiniciar</button>
+  </div>
+
+  <!-- Script do jogo -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  background: #87ceeb; /* Cor de céu padrão */
+}
+
+/* Centralizar elementos */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+}
+
+/* Botões */
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff9800;
+  color: #fff;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e68900;
+}
+
+/* Ocultar elementos */
+.hidden {
+  display: none;
+}
+
+/* Canvas ocupa toda a tela */
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #87ceeb;
+}
+
+/* Estilo do HUD */
+canvas {
+  display: block;
+  z-index: 1;
+}
