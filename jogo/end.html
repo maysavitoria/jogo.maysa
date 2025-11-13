@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resultado</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="menu">
+  <div class="menu-container">
+    <img src="img/fundo_fim.jpg" alt="fundo" class="menu-bg" />
+    <h1>🏆 Resultado Final</h1>
+    <pre id="resultBox"></pre>
+
+    <div class="end-buttons">
+      <button onclick="window.location.href='index.html'">Voltar ao menu</button>
+      <button onclick="window.location.href='game.html?mode=solo'">Jogar Solo</button>
+      <button onclick="window.location.href='game.html?mode=duo'">Jogar Duo</button>
+    </div>
+  </div>
+
+  <script>
+    // Recupera dados
+    const mode = localStorage.getItem('mode') || 'solo';
+    const p1score = parseInt(localStorage.getItem('p1_total') || '0', 10);
+    const p2score = parseInt(localStorage.getItem('p2_total') || '0', 10);
+    const totalTime = parseFloat(localStorage.getItem('total_time') || '0');
+
+    let text = `Modo: ${mode === 'duo' ? 'Dupla (competição)' : 'Solo'}\n\n`;
+    text += `Tempo total: ${totalTime.toFixed(1)}s\n\n`;
+    text += `P1: ${p1score} pontos\n`;
+    if (mode === 'duo') text += `P2: ${p2score} pontos\n\n`;
+
+    if (mode === 'duo') {
+      if (p1score > p2score) text += '🎉 Vencedor: Jogador 1 (P1)';
+      else if (p2score > p1score) text += '🎉 Vencedor: Jogador 2 (P2)';
+      else text += '🤝 Empate!';
+    } else {
+      text += '\nObrigado por jogar! Pontuação final mostrada acima.';
+    }
+
+    document.getElementById('resultBox').innerText = text;
+  </script>
+</body>
+</html>

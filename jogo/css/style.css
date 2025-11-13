@@ -1,0 +1,81 @@
+@import url('https://fonts.cdnfonts.com/css/press-start-2p');
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('img/fundo_menu.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.menu-container {
+  text-align: center;
+  color: #00c8ff;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00f0ff, 0 0 40px #0090ff;
+  animation: titleGlow 1.5s ease-in-out infinite alternate;
+  margin-bottom: 25px;
+}
+
+@keyframes titleGlow {
+  from { text-shadow: 0 0 10px #007fff, 0 0 20px #00aaff; }
+  to { text-shadow: 0 0 25px #00e0ff, 0 0 50px #00ffff; }
+}
+
+.menu-box {
+  background: rgba(0, 0, 30, 0.9);
+  border: 4px solid #00bfff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 420px;
+  box-shadow: 0 0 15px #00bfff, inset 0 0 10px #0055ff;
+  animation: borderPulse 2s infinite alternate;
+}
+
+@keyframes borderPulse {
+  from { box-shadow: 0 0 15px #0088ff, inset 0 0 10px #0044ff; }
+  to { box-shadow: 0 0 30px #00eaff, inset 0 0 20px #0099ff; }
+}
+
+.menu-inner-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #00bfff;
+  box-shadow: 0 0 10px #00bfff;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(to bottom, #0044aa, #001f55);
+  color: #bdeaff;
+  border: 3px solid #00bfff;
+  border-radius: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  text-shadow: 0 0 5px #00e5ff;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px #005fff;
+  font-size: 10px;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #0077ff, #003366);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00d9ff, inset 0 0 10px #0077ff;
+}
